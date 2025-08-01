@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loa Kéo An Nhiên</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <!----------------- 
+        CSS 
+    ------------------->
+    <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+    <link type="text/css" rel="stylesheet" href="./css/responsive-tabs.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!----------------- 
+        FONT 
+    ------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---------------- 
+      JQuery 
+    ------------------>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+    <!----------------- 
+        Scripts 
+    ------------------->
+    <script src="./js/jquery.hidescroll.js" defer></script>
+    <script src="./js/jquery.responsiveTabs.js" defer></script>
+    <script defer type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <!---------------------
+      Navigation
+    ---------------------->
+    <header class="relative z-50">
+      <div class="flex items-center justify-center navbar">
+        <div
+          class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between"
+        >
+          <!-- LOGO -->
+          <a href="./" class="flex items-center justify-center flex-none">
+            <img src="./assets/logo.png" alt="logo" class="w-12 h-12" />
+            <div>
+              <p class="text-[24px] text-pink-900 capitalize font-lobster">
+                Loa Kéo An Nhiên
+              </p>
+              <p class="text-base text-orange-900 capitalize font-lobster">
+                0999-888-777
+              </p>
+            </div>
+          </a>
+          <!-- Nav Links -->
+          <nav
+            class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8"
+          >
+            <a href="./products.html" class="navLink"> Sản Phẩm </a>
+            <a href="./#story" class="navLink"> Giới thiệu </a>
+            <a href="./#contact" class="navLink"> Liên hệ </a>
+          </nav>
+
+          <!-- Hamburger icon -->
+          <div class="block cursor-pointer lg:hidden" id="toggle_btn">
+            <img
+              src="./assets/Menu Icon.svg"
+              alt="hamburger icon"
+              class="size-5"
+            />
+          </div>
+
+          <!-- Mobile Menu -->
+          <div class="dropdown-menu lg:hidden">
+            <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
+            <a href="#story" class="navLink mobileNavLink">Giới thiệu</a>
+            <a href="#contact" class="navLink mobileNavLink">Liên hệ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!---------------------
+      HERO
+    ---------------------->
+    <section
+      id="hero"
+      class="h-screen max-h-[1100] bg-gradient-to-t from-p-100 to-white overflow-y-clip"
+    >
+      <div
+        class="container relative flex items-center justify-center w-full h-full xl:justify-start"
+      >
+        <!-- Hình -->
+        <div
+          class="absolute bottom-0 right-0 z-0 overflow-hidden md:-bottom-20 xl:top-1/2 xl:-stranslate-y-1/2"
+        >
+          <img
+            src="./assets/hero_img.png"
+            alt="hero-img"
+            class="h-full 2xl:[mask-image:linear-gradient(to_left,transparent,black_10%)]"
+          />
+        </div>
+
+        <!-- Nội dung chính -->
+        <div
+          class="z-10 flex flex-col items-center justify-center gap-4 md:gap-9 xl:items-start"
+        >
+          <div>
+            <h2
+              class="mb-2 text-xs font-semibold leading-none tracking-wider text-center uppercase font-inter md:text-sm xl:text-start"
+            >
+              Các chiếc loa
+              <span class="text-xs text-gradient md:text-sm">đang chờ</span>
+              bạn
+            </h2>
+            <h1
+              class="text-5xl leading-none tracking-wide text-center capitalize font-lobster text-p-950 md:text-6xl lg:text-7xl"
+            >
+              Độ Chế Loa Kéo Theo Yêu Cầu
+            </h1>
+          </div>
+          <p class="max-w-xl px-4 text-center text-n-700 md:px-0 xl:text-start">
+            ⚡ "Loa tốt không chỉ phát nhạc – mà tiếp thêm lửa cho từng khoảnh
+            khắc. Sống nhiệt, chơi chất – đó là cách chúng tôi đồng hành cùng
+            bạn."
+          </p>
+
+          <button>
+            <a class="btn" href="#products">
+              Tìm Hiểu Sản Phẩm
+              <img src="./assets/right-arrow.svg" alt="right arrow" />
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------
+      PARTNER LOGOS
+    ---------------------->
+    <section id="parter-logos">
+      <div class="container">
+        <!-- heading -->
+        <div class="mt-10">
+          <h2 class="sub_heading">Có mặt tại</h2>
+          <h1 class="main_heading">
+            Những Nhà Phân Phối <span class="text-gradient">Uy Tín</span>
+          </h1>
+        </div>
+
+        <!-- logos -->
+        <div
+          class="flex mt-9 md:mt-16 [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
+        >
+          <div
+            id="partner-logo-list"
+            class="flex flex-none logos-wrapper gap-14 pl-14"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------
+      Products
+    ---------------------->
+    <section class="products">
+      <div class="container">
+        <div class="flex flex-col gap-9">
+          <!-- heading -->
+          <div class="mt-10">
+            <h2 class="sub_heading">Tìm hiểu</h2>
+            <h1 class="main_heading">
+              Sản phẩm của <span class="text-gradient"> Loa Kéo An Nhiên</span>
+            </h1>
+          </div>
+
+          <!-- tabs -->
+          <div id="products-tabs">
+            <ul
+              class="flex bg-p-50 px-4 md:px-10 xl:px-[200px] py-4 md:py-6 gap-4 md:gap-8 justify-center mb-9 text-center"
+            >
+              <li>
+                <a href="#loakeo" class="tab-link"><span>Loa</span> Kéo</a>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#loaxachtay" class="tab-link"
+                  >Loa <span>Xách tay</span></a
+                >
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#ampli" class="tab-link"><span>Ampli</span></a>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#sub" class="tab-link"><span>Sub</span></a>
+              </li>
+            </ul>
+
+            <div id="loakeo">
+              <div class="tabContainer">
+                <img
+                  src="./assets/product_1.jpg"
+                  alt="matcha"
+                  class="productImg"
+                />
+                <div>
+                  <h3>Loa Kéo</h3>
+                  <h4>
+                    Khám phá sức mạnh âm thanh di động từ "người bạn đồng hành"
+                    của mọi cuộc vui
+                  </h4>
+                  <p>
+                    Khám phá sức mạnh âm thanh di động từ "người bạn đồng hành"
+                    của mọi cuộc vui Bạn đang tìm kiếm một thiết bị âm thanh vừa
+                    mạnh mẽ vừa tiện lợi? Hãy làm quen với loa kéo, giải pháp
+                    hoàn hảo cho những buổi tiệc, hội nghị, lớp học hay cả những
+                    phút chill nhẹ nhàng tại nhà. Với thiết kế linh hoạt, dễ di
+                    chuyển và kết nối nhanh chóng qua Bluetooth hoặc USB, loa
+                    kéo đang trở thành lựa chọn yêu thích của mọi lứa tuổi.
+                    <br />
+                    <br />
+                    Không chỉ đơn thuần là chiếc loa di động, loa kéo còn tích
+                    hợp micro không dây, pin sạc lâu dài và hệ thống điều chỉnh
+                    âm thanh chuyên nghiệp – giúp bạn làm chủ mọi không gian từ
+                    sân khấu đến quán cà phê.
+                    <br />
+                    <br />
+                    Hãy trải nghiệm sự kết hợp hoàn hảo giữa công nghệ hiện đại
+                    và nhu cầu giải trí thực tế. Loa kéo – mang âm nhạc đến gần
+                    bạn hơn, mọi lúc mọi n
+                  </p>
+                  <button>
+                    <a href="" class="btn"
+                      >Xem Sản Phẩm Loa Kéo
+                      <img src="./assets/right-arrow.svg" alt="right-arrow"
+                    /></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="loaxachtay">
+              <div class="tabContainer">
+                <img
+                  src="./assets/product_2.jpg"
+                  alt="olongTea"
+                  class="productImg"
+                />
+                <div>
+                  <h3>Loa Xách Tay – Âm thanh theo bạn mọi hành trình</h3>
+                  <h4>
+                    Gọn nhẹ, linh hoạt, sẵn sàng khuấy động mọi không gian sống
+                  </h4>
+                  <p>
+                    Bạn đang tìm kiếm một thiết bị âm thanh nhỏ gọn nhưng vẫn
+                    đảm bảo chất lượng vượt trội? Loa xách tay chính là lựa chọn
+                    lý tưởng. Với thiết kế tiện lợi, dễ dàng mang theo bên mình,
+                    dòng loa này phù hợp cho mọi hoạt động ngoài trời – từ dã
+                    ngoại, cắm trại, đến các buổi picnic, tập luyện hay chill
+                    tại ban công.
+                    <br /><br />
+                    Dù kích thước nhỏ, nhưng loa xách tay ngày nay được trang bị
+                    công nghệ Bluetooth tiên tiến, âm bass chắc, treble rõ, và
+                    thời lượng pin ấn tượng. Một số mẫu còn tích hợp đài FM, thẻ
+                    nhớ hoặc micro giúp bạn vừa nghe nhạc, vừa có thể hát
+                    karaoke mọi lúc.
+                  </p>
+                  <button>
+                    <a href="" class="btn"
+                      >Xem Sản Phẩm Loa Xách Tay
+                      <img src="./assets/right-arrow.svg" alt="right-arrow"
+                    /></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="ampli">
+              <div class="tabContainer">
+                <img
+                  src="./assets/product_3.jpg"
+                  alt="whiteTea"
+                  class="productImg"
+                />
+                <div>
+                  <h3>Ampli – Trái tim của hệ thống âm thanh</h3>
+                  <h4>
+                    Khơi dậy sức mạnh âm thanh với bộ khuếch đại không thể thiếu
+                  </h4>
+                  <p>
+                    Bạn có biết rằng dù sở hữu loa chất lượng đến đâu, nếu thiếu
+                    một chiếc ampli phù hợp thì âm thanh cũng sẽ không đạt đến
+                    độ sắc nét và sống động như mong đợi? Ampli – hay còn gọi là
+                    bộ khuếch đại âm thanh – chính là “trái tim” truyền năng
+                    lượng cho cả hệ thống, biến tín hiệu nhỏ thành âm thanh mạnh
+                    mẽ, đầy nội lực.
+                    <br />
+                    <br />
+                    Dù bạn là người chơi âm thanh chuyên nghiệp hay đơn giản chỉ
+                    muốn nâng tầm trải nghiệm nghe nhạc tại nhà, hãy đầu tư vào
+                    một ampli chất lượng – bạn sẽ cảm nhận được âm thanh không
+                    chỉ để nghe, mà để cảm nhận bằng cả trái tim.
+                  </p>
+                  <button>
+                    <a href="" class="btn"
+                      >Xem Sản Phẩm Ampli
+                      <img src="./assets/right-arrow.svg" alt="right-arrow"
+                    /></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="sub">
+              <div class="tabContainer">
+                <img
+                  src="./assets/product_4.jpg"
+                  alt="blackTea"
+                  class="productImg"
+                />
+                <div>
+                  <h3>Sub – Linh hồn của dải âm trầm</h3>
+                  <h4>
+                    Cảm nhận từng nhịp đập của âm thanh qua sức mạnh “nội lực”
+                    từ loa Sub
+                  </h4>
+                  <p>
+                    Bạn yêu thích âm nhạc sống động, rạp phim tại gia hay trải
+                    nghiệm game chân thật? Đừng bỏ qua loa Sub – thiết bị chuyên
+                    xử lý dải âm trầm, mang đến chiều sâu và sự rung động đầy
+                    cảm xúc trong từng giai điệu.
+                    <br />
+                    <br />
+                    Dù dùng cho dàn karaoke, xem phim hay âm nhạc chuyên nghiệp,
+                    một chiếc loa Sub chất lượng sẽ nâng toàn bộ hệ thống âm
+                    thanh của bạn lên một tầm cao mới – mạnh mẽ, sâu lắng và
+                    chân thực hơn bao giờ hết.
+                  </p>
+                  <button>
+                    <a href="" class="btn"
+                      >Xem Sản Phẩm Sub
+                      <img src="./assets/right-arrow.svg" alt="right-arrow"
+                    /></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="h-screen"></div>
+  </body>
+</html>
